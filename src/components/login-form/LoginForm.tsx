@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
+import { useInput } from 'hooks/useInput';
+const LoginForm = () => {
+  /**
+   * useInput Validator Examples
+   */
+  const includeChecker = (value: string) => !value.includes('@');
+  const lengthChecker = (value: string) => value.length < 10;
+  const id = useInput("", includeChecker);
+  const pw = useInput("", lengthChecker);
 
-const LoginForm = () => {  
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
-
-  const handleIdChange = (event: React.ChangeEvent<HTMLInputElement>) => setId(event.target.value);
-  const handlePwChange = (event: React.ChangeEvent<HTMLInputElement>) => setPw(event.target.value);
 
   return (
     <>
       <form className="login_form">
-        <input className="login__form__id_input_feild" onChange={handleIdChange}/>
-        <input type="password" className="login__form__pw_input_feild" onChange={handlePwChange}/>
+        <input className="login__form__id_input" {...id}/>
+        <input type="password" className="login__form__pw_input" {...pw}/>
       </form>
 
-      <div className="login_form__test_feild">
-        id: {id},
-        pw: {pw},
+      <div className="login_form__test">
+        id: {id.value},
+        pw: {pw.value},
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import Home from 'pages/Home';
 import Login from 'pages/Login';
 import PickUp from 'pages/PickUp';
 import Store from 'pages/Store';
+import { createSemanticDiagnosticsBuilderProgram } from 'typescript';
 
 const AppRoutes: Routes[] = [
 {
@@ -16,7 +17,7 @@ const AppRoutes: Routes[] = [
   component: Login,
 },
 {
-  path: 'PickUp',
+  path: '/PickUp',
   exact: true,
   component: PickUp,
 },
