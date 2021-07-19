@@ -3,6 +3,8 @@ import { useInput } from 'hooks/useInput';
 const LoginForm = () => {
   /**
    * useInput Validator Examples
+   * id에 '@'가 들어가면 입력x
+   * pw의 최대길이 지정
    */
   const includeChecker = (value: string) => !value.includes('@');
   const lengthChecker = (value: string) => value.length < 10;
