@@ -26,6 +26,10 @@ const ProductContainer = () => {
             <span className="productDiscountPrice">{productItem.productDiscountPrice}</span>
           </strong>
         </div>
+        <div className="productButtonBox">
+          <button className="productBuyButton">구매하기</button>
+          <button className="producBasketButton">장바구니</button>
+        </div>
       </div>
     </li>
     ));
