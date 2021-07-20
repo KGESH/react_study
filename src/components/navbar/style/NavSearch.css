@@ -1,0 +1,30 @@
+input {
+    outline: none;
+}
+
+.search__group {
+    width: 180px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.search__group_inner {
+    display: flex;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.search__input {
+    width: 147px;
+    height: 25px;
+    border: none;
+}
+
+.search__btn {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+
+}
