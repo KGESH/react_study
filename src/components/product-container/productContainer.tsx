@@ -1,5 +1,3 @@
-import { useState } from "react";
-import type { ProductProps } from "types/Props";
 import ProductItems from "components/product-container/products";
 import "components/product-container/style/productContainer.css";
 

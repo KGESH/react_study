@@ -53,13 +53,6 @@ const ProductItems: ProductProps[] = [
     productPrice: "15,000원",
     productDiscountPrice: "13,500원",
   },
-  {
-    productImagePath: img1,
-    productIconPath: icon2,
-    productName: "[BACS 커피]",
-    productPrice: "15,000원",
-    productDiscountPrice: "13,500원",
-  },
 ];
 
 export default ProductItems;
