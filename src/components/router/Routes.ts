@@ -3,7 +3,7 @@ import Home from 'domain/home/Home';
 import Login from 'domain/login/Login';
 import PickUp from 'domain/pickup/PickUp';
 import Store from 'domain/store/Store';
-
+import EmailSignUp from 'domain/EmailSignUp/EmailSignUp';
 
 /**
  * 새로운 페이지를 라우터에 연결할 때 
@@ -30,6 +30,11 @@ const AppRoutes: Routes[] = [
   path: '/Store',
   exact: true,
   component: Store,
+},
+{
+  path: '/EmailSignUp',
+  exact: true,
+  component: EmailSignUp,
 },
 ]
 
