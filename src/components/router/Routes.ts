@@ -1,9 +1,14 @@
 import type { Routes } from 'types/Routes';
-import Home from 'pages/Home';
-import Login from 'pages/Login';
-import PickUp from 'pages/PickUp';
-import Store from 'pages/Store';
-import { createSemanticDiagnosticsBuilderProgram } from 'typescript';
+import Home from 'domain/home/Home';
+import Login from 'domain/login/Login';
+import PickUp from 'domain/pickup/PickUp';
+import Store from 'domain/store/Store';
+
+
+/**
+ * 새로운 페이지를 라우터에 연결할 때 
+ * 이곳에 추가
+ */
 
 const AppRoutes: Routes[] = [
 {

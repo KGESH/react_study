@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AppRouter from 'components/router/AppRouter';
-import Initializing from 'pages/Initializing';
+import Loading from 'components/loading-page/LoadingPage';
 
 const App = () => {
   const [isInit, setisInit] = useState(true);
@@ -12,7 +12,7 @@ const App = () => {
         <AppRouter isLoggedIn={isLoggedIn}/>
 
       ) : (
-        <Initializing/>
+        <Loading/>
 
       )}
     </>

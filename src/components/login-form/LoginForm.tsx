@@ -1,27 +1,54 @@
 import React, { useState } from 'react';
-import { useInput } from 'hooks/useInput';
+import { useForm } from 'react-hook-form';
+import type { LoginFormValues } from 'types/FormValues';
+import 'components/login-form/style/LoginForm.css'
+
+
 const LoginForm = () => {
   /**
-   * useInput Validator Examples
-   * id에 '@'가 들어가면 입력x
-   * pw의 최대길이 지정
+   * LoginForm Examples
+   * https://react-hook-form.com/kr/get-started/#Quickstart
    */
-  const includeChecker = (value: string) => !value.includes('@');
-  const lengthChecker = (value: string) => value.length < 10;
-  const id = useInput("", includeChecker);
-  const pw = useInput("", lengthChecker);
+  const {
+    register,
+    handleSubmit, 
+    formState: { errors },
+  } = useForm<LoginFormValues>();
+
+  const [data, setData] = useState<LoginFormValues>(
+    {
+      id: "",
+      pw: ""
+    }
+  );
+
+  const onSubmit = (formData: any) => setData(formData);
 
 
   return (
     <>
-      <form className="login_form">
-        <input className="login__form__id_input" {...id}/>
-        <input type="password" className="login__form__pw_input" {...pw}/>
+      <form className="login__form" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          className="login__form__id_input"
+          placeholder="Input ID"
+          {...register("id", { required: "필수 항목임" })}
+          />
+        {errors.id && <p>{errors.id.message}</p>}
+        
+        <input
+          className="login__form__pw_input"
+          placeholder="Input PassWord"
+          type="password"
+          {...register("pw", { required: "필수 항목임" })}
+          />
+        {errors.pw && <p>{errors.pw.message}</p>}
+
+        <button className="login__form__submit_button" type="submit">로그인</button>
       </form>
 
       <div className="login_form__test">
-        id: {id.value},
-        pw: {pw.value},
+        <p>ID : {data.id}</p>
+        <p>PW : {data.pw}</p>
       </div>
     </>
   );

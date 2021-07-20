@@ -7,7 +7,12 @@ const Login = ({isLoggedIn}: HomeProps) => {
 
   return (
     <div className="login">
-      <LoginForm />
+      {/*** Navbar ***/}
+      <h1 className="login__title">로그인</h1>
+      <div className="login__container">
+        <LoginForm />
+
+      </div>
     </div>
   );
 }
