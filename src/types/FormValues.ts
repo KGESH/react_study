@@ -3,12 +3,13 @@ type LoginFormValues = {
   pw: string;
 };
 
-type SignUpFormValues = {
+type EmailSignUpFormValues = {
   id: string;
   pw: string;
+  pwConfirm: string;
   name: string;
   email: string;
   age: number;
 };
 
-export type { LoginFormValues, SignUpFormValues };
+export type { LoginFormValues, EmailSignUpFormValues };

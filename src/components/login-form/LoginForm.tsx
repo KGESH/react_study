@@ -6,7 +6,7 @@ import 'components/login-form/style/LoginForm.css'
 
 const LoginForm = () => {
   /**
-   * LoginForm Examples
+   * Form Examples
    * https://react-hook-form.com/kr/get-started/#Quickstart
    */
   const {
@@ -22,7 +22,7 @@ const LoginForm = () => {
     }
   );
 
-  const onSubmit = (formData: any) => setData(formData);
+  const onSubmit = (formData: LoginFormValues) => setData(formData);
 
 
   return (

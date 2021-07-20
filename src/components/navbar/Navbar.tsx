@@ -25,6 +25,7 @@ const Navbar = ({isLoggedIn}: Props) => {
 
         <NavbarItem itemName="Store" url="Store"/>
         <NavbarItem itemName="PickUp" url="PickUp"/>
+        <NavbarItem itemName="SignUp" url="EmailSignUp"/>
       </ul>
     </div>
   );
