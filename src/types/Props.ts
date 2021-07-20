@@ -9,6 +9,12 @@ type HomeProps = {
   isLoggedIn: boolean;
   isInit?: boolean;
 };
+type ProductProps = {
+  productImagePath: string;
+  productIconPath: string;
+  productName: string;
+  productPrice: string;
+  productDiscountPrice: string;
+};
 
-
-export type { NavbarProps, HomeProps };
+export type { NavbarProps, HomeProps, ProductProps };
