@@ -41,6 +41,7 @@ const EmailSignUpForm = () => {
         <input
           className="sign_up__form__pw_input"
           placeholder="Input PassWord"
+          type="password"
           {...register("pw", { required: "PW는 필수 항목임" })}
           />
         {errors.pw && <p>{errors.pw.message}</p>}
@@ -48,6 +49,7 @@ const EmailSignUpForm = () => {
         <input
           className="sign_up__form__pw_confirm_input"
           placeholder="confirm password"
+          type="password"
           {...register("pwConfirm", { required: "PwConfirm은 필수 항목임" })}
           />
         {errors.pwConfirm && <p>{errors.pwConfirm.message}</p>}

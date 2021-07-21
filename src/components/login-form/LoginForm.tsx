@@ -27,16 +27,17 @@ const LoginForm = () => {
 
   return (
     <>
-      <form className="login__form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="login_form" onSubmit={handleSubmit(onSubmit)}>
+        <h1 className="login_form__title">이메일 로그인</h1>
         <input
-          className="login__form__id_input"
+          className="login_form__id_input"
           placeholder="Input ID"
           {...register("id", { required: "필수 항목임" })}
           />
         {errors.id && <p>{errors.id.message}</p>}
         
         <input
-          className="login__form__pw_input"
+          className="login_form__pw_input"
           placeholder="Input PassWord"
           type="password"
           {...register("pw", { required: "필수 항목임" })}
@@ -44,12 +45,13 @@ const LoginForm = () => {
         {errors.pw && <p>{errors.pw.message}</p>}
 
         <button className="login__form__submit_button" type="submit">로그인</button>
-      </form>
 
       <div className="login_form__test">
+        <p>login form test area</p>
         <p>ID : {data.id}</p>
         <p>PW : {data.pw}</p>
       </div>
+      </form>
     </>
   );
 }

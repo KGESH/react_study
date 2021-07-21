@@ -99,7 +99,7 @@ const Navbar = ({isLoggedIn}: Props) => {
                         ) : (
                             <div className="nav__member_box">
                                 <div className="nav__login_member">
-                                    <NavbarItem itemName="로그인" url="/"/>
+                                    <NavbarItem itemName="로그인" url="/Login"/>
                                 </div>
                                 <div className="nav__login_member">
                                     <NavbarItem itemName="회원가입" url="/"/>

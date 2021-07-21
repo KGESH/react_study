@@ -12,6 +12,7 @@ const useInput = (initialValue: any, validator: (value: any) => boolean) => {
       target: { value },
     } = event;
     const willUpdate = validator(value);
+    
 
     if (willUpdate) {
       setValue(value);

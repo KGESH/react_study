@@ -1,7 +1,15 @@
-import type { ProductProps } from "types/Props";
 import img1 from "resources/images/testImage.png";
 import icon1 from "resources/images/testIcon.png";
 import icon2 from "resources/images/testIcon2.png";
+
+
+type ProductProps = {
+  productImagePath: string;
+  productIconPath: string;
+  productName: string;
+  productPrice: string;
+  productDiscountPrice: string;
+};
 
 const ProductItems: ProductProps[] = [
   {
