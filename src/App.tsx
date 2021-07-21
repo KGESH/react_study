@@ -10,7 +10,6 @@ const App = () => {
     <>
       {isInit ? (
         <AppRouter isLoggedIn={isLoggedIn}/>
-
       ) : (
         <Loading/>
 

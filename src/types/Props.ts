@@ -1,13 +1,13 @@
 import Navbar from "components/navbar/Navbar";
 
 type NavbarProps = {
-  itemName: string;
-  url: string;
+    itemName: string;
+    url: string;
 };
 
 type HomeProps = {
-  isLoggedIn: boolean;
-  isInit?: boolean;
+    isLoggedIn: boolean;
+    isInit?: boolean;
 };
 type ProductProps = {
   productImagePath: string;
