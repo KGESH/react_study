@@ -6,6 +6,9 @@ export const GoogleLogin = () => {
       const { credential } = result;
       const token = (<any>result).credential.accessToken;
       const { user } = result;
+
+      console.log(`user`);
+      console.log(user);
     })
     .catch((error) => {
       const errorCode = error.code;
