@@ -5,9 +5,7 @@ import Error404 from 'components/error-page/Error404';
 import AppRoutes from 'components/router/Routes';
 import type {HomeProps} from 'types/Props';
 
-const AppRouter = ({isLoggedIn}: HomeProps) => {
-
-    return (
+const AppRouter = ({isLoggedIn}: HomeProps) => (
         <>
             <Navbar isLoggedIn={isLoggedIn}/>
             <Switch>
@@ -17,7 +15,6 @@ const AppRouter = ({isLoggedIn}: HomeProps) => {
                 <Route component={Error404}/>
             </Switch>
         </>
-    );
-}
+    )
 
 export default AppRouter;
