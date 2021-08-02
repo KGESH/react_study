@@ -9,11 +9,12 @@ const AppRouter = ({ isLoggedIn }: HomeProps) => (
   <>
     <Navbar isLoggedIn={isLoggedIn} />
     <Switch>
-      {AppRoutes.map((route) => (
+      {AppRoutes.map((route, key) => (
         <Route
           path={route.path}
           exact={route.exact}
           component={route.component}
+          key={key}
         />
       ))}
       <Route component={Error404} />

@@ -3,7 +3,8 @@ import AppRouter from 'components/router/AppRouter';
 import Loading from 'components/loading-page/LoadingPage';
 import { Auth } from 'services/firebase/Firebase';
 import { useHistory } from 'react-router-dom';
-
+import KakaoSdkInit from 'services/kakao/KakaoSdkInit';
+import useExternalScript from 'hooks/useExternalScript';
 const App = () => {
   const [isInit, setIsInit] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,12 +14,10 @@ const App = () => {
     Auth.onAuthStateChanged((user) => {
       if (user) {
         setIsLoggedIn(true);
-        console.log('LogIn');
         console.log(user);
         history.push('/');
       } else {
         setIsLoggedIn(false);
-        console.log('LogOut');
       }
       setIsInit(true);
       console.log('App init');
