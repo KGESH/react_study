@@ -8,11 +8,16 @@ import { queryByTestId } from '@testing-library/react';
 
 const KakaoCallback = () => {
   const location = useLocation();
-  const { access_token, refresh_token } = queryString.parse(location.search);
-  console.log(`Access Token = ${access_token}`);
-  console.log(`Refresh Token = ${refresh_token}`);
+  const { jwt } = queryString.parse(location.search);
+  if (jwt) {
+    /**
+     * 테스트용
+     * 쿠키로 바꿔줘야함
+     * */
+    localStorage.setItem('jwt', jwt as string);
+    console.log(`jwt = ${jwt}`);
+  }
 
-  alert('hello');
   return <Redirect to='/' />;
 };
 

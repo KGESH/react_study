@@ -1,38 +1,33 @@
 import React from 'react';
 import ProductContainer from 'components/product-container/ProductContainer';
 import { gql } from 'apollo-boost';
-import { Query } from 'react-apollo';
 import { useQuery } from '@apollo/react-hooks';
 
-const GET_PEOPLE = gql`
+const GET_USER = gql`
   query {
-    people(id: "1") {
+    authUser {
       id
       name
-      age
-      gender
+      email
     }
   }
 `;
 
-type gProps = {
-  id: string;
-  name: string;
-  age: number;
-  gender: string;
-};
-
 const Home = () => {
-  const { loading, data, error } = useQuery(GET_PEOPLE);
+  const { loading, data, error } = useQuery(GET_USER);
+  /**
+   * 로그인 성공하면 로그인에 대한 상태 설정필요
+   */
+
   if (error) {
   }
+  console.log(`auth data:`);
   console.log(data);
 
-  if (data?.getPerson) {
-    console.log(`id: ${data.getPerson.id}`);
-    console.log(`name: ${data.getPerson.name}`);
-    console.log(`age: ${data.getPerson.age}`);
-    console.log(`gender: ${data.getPerson.gender}`);
+  if (data?.authUser) {
+    console.log(`id: ${data.authUser.id}`);
+    console.log(`name: ${data.authUser.name}`);
+    console.log(`email: ${data.authUser.email}`);
   }
 
   return (
