@@ -15,16 +15,4 @@
 
 ### Structure
 ---
-#### App <- index.tsx
-#### ┣ AppRouter [Nav구성, Router구성]
-#### ┃	┣ Navbar [Nav구성]
-#### ┃	┃	┖ NavbarItem [Nav에 사용되는 item을 설정]
-#### ┃	┣ Error404 [url예외처리]
-#### ┃	┖ Routes(AppRouter) [Router에 사용되는 item을 설정]
-#### ┃		┣ Home
-#### ┃       ┣ PickUp
-#### ┃		┣ Store [page 구성]
-#### ┃		┖ Login [login page 구성]
-#### ┃			┖ LoginForm [login 기능 설정]
-#### ┃
-#### ┖ Initializing [isInit?? ]
+[Structure] (structure.txt)
