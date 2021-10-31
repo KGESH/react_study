@@ -12,6 +12,11 @@
 ---
 <pre>npm start</pre>
 
+## Stack
+---
+- React
+- Apollo Client (GraphQL)
+
 
 ### Structure
 ---
