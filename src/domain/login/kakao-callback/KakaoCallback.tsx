@@ -1,10 +1,5 @@
-import React, { useEffect } from 'react';
 import { Redirect, useLocation } from 'react-router-dom';
 import queryString from 'query-string';
-import axios from 'axios';
-import { client as aplloClient } from 'services/apllo-client/apllo';
-import { KakaoLoginMutation } from 'services/apllo-client/KakaoLoginMutation';
-import { queryByTestId } from '@testing-library/react';
 
 const KakaoCallback = () => {
   const location = useLocation();
@@ -17,6 +12,8 @@ const KakaoCallback = () => {
     localStorage.setItem('jwt', jwt as string);
     console.log(`jwt = ${jwt}`);
   }
+
+  alert('stop!');
 
   return <Redirect to='/' />;
 };
