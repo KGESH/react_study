@@ -15,4 +15,4 @@
 
 ### Structure
 ---
-[Structure] (structure.txt)
+[Structure] (./structure.txt)
